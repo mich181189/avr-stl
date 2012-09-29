@@ -29,6 +29,17 @@ namespace std {
 	}
 
 	template <class T>
+	vector<T>::vector(vector<T> &in)
+		: d(new CPrivateData)
+	{
+		reserve(in.size());
+		for(int i=0;i<in.size();++i)
+		{
+			at(i) = in[i];
+		}
+	}
+
+	template <class T>
 	vector<T>::~vector()
 	{
 		delete d->m_ptr;

@@ -16,6 +16,7 @@ template <class T>
 class vector {
 public:
 	vector();
+	vector(vector<T> &in);
 	~vector();
 
 	size_t size() const;
